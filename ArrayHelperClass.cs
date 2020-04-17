@@ -26,5 +26,27 @@ namespace dz13
             Array.Resize(ref arr, arr.Length-1);
             return first;
         }
+        public static int UnShift<T>(ref T[] arr, T var)
+        {
+            T a, b, c=arr[arr.Length-1];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i==0)
+                {
+                    Array.Resize(ref arr, arr.Length + 1);
+                    a = arr[i];
+                    arr[i] = var;
+                    for (int j=i+1; j<arr.Length-1; j=j+2)
+                    {
+                        b = arr[j];
+                        arr[j]=a;
+                        a=arr[j+1];
+                        arr[j+1] = b;                  
+                    }
+                    arr[arr.Length-1]=c;
+                }
+            }
+            return arr.Length;
+        }
     }
 }
