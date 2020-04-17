@@ -19,10 +19,7 @@ namespace dz13
         public static T Shift<T>(ref T[] arr)
         {
             T first = arr[0];
-            for (int i = 0;i <arr.Length-1; i++)
-            {
-                arr[i] = arr[i+1];
-            }
+            for (int i = 0;i <arr.Length-1; i++)arr[i] = arr[i+1];
             Array.Resize(ref arr, arr.Length-1);
             return first;
         }
@@ -54,15 +51,12 @@ namespace dz13
             int j=0;
             T[] arr1 = new T[length];
             if(end_index == 0) end_index = arr.Length;
-            if(begin_index > arr.Length-1)
-            {
-              return arr1;
-            } 
+            if(begin_index > arr.Length-1)return arr1;
             if(begin_index>=0 && end_index>0)
             {
-              Array.Resize(ref arr1, arr1.Length+(end_index-begin_index+1));
               for(int i=begin_index; i<end_index; i++)
               {
+                Array.Resize(ref arr1, arr1.Length+1);
                 arr1[j] = arr[i];
                 j++;
               }
