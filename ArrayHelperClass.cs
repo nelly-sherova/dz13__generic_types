@@ -16,5 +16,15 @@ namespace dz13
             arr[arr.Length-1] = var;
             return arr.Length;
         }
+        public static T Shift<T>(ref T[] arr)
+        {
+            T first = arr[0];
+            for (int i = 0;i <arr.Length-1; i++)
+            {
+                arr[i] = arr[i+1];
+            }
+            Array.Resize(ref arr, arr.Length-1);
+            return first;
+        }
     }
 }
