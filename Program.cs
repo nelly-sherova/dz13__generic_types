@@ -93,12 +93,10 @@ namespace dz13
                 }
                 
             }
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("Ссылка на Array Helper static class ----> https://github.com/nelly-sherova/dz9-static-class-ArrayHelper");
+            Console.ForegroundColor = ConsoleColor.White;
         }            
-                    
-                    
-                    
-                    
-                    
-                   
+           
     }
 }
