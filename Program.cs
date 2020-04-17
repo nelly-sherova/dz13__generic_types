@@ -38,6 +38,10 @@ namespace dz13
                     case 2:
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Element: ");
+                        // int element = Convert.ToInt32(Console.ReadLine());
+                        // double element = Convert.ToDouble(Console.ReadLine());
+                        // decimal element = Convert.ToDecimal(Console.ReadLine());
+                        // float element = Convert.ToFloat(Console.ReadLine());
                         string element = Console.ReadLine();
                         Console.WriteLine($"Size of Array: {ArrayHelper.Push(ref arr, element)}");
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -52,6 +56,10 @@ namespace dz13
                     case 4:
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("Element: ");
+                        // element1 = Convert.ToInt32(Console.ReadLine());
+                        // double element1 = Convert.ToDouble(Console.ReadLine());
+                        // decimal element1 = Convert.ToDecimal(Console.ReadLine());
+                        // float element1 = Convert.ToFloat(Console.ReadLine());
                         string element1 = Console.ReadLine(); 
                         Console.WriteLine("Size of Array: " + ArrayHelper.UnShift(ref arr, element1));
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -63,6 +71,10 @@ namespace dz13
                         int begin_index = Convert.ToInt32(Console.ReadLine());
                         Console.Write("End Index: ");
                         int end_index = Convert.ToInt32(Console.ReadLine());
+                        //int[] Array = ArrayHelper.Slice(arr, begin_index, end_index);
+                        //double[] Array = ArrayHelper.Slice(arr, begin_index, end_index);
+                        //decimal[] Array = ArrayHelper.Slice(arr, begin_index, end_index);
+                        //float[] Array = ArrayHelper.Slice(arr, begin_index, end_index);
                         string[] Array = ArrayHelper.Slice(arr, begin_index, end_index);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("Sliced array: ");
